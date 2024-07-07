@@ -14,5 +14,13 @@ let x = setInterval(function(){
     document.getElementById('minuts').innerHTML = minutes;
     document.getElementById('seconds').innerHTML = seconds;
 
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById('days').innerHTML = "00";
+        document.getElementById('hours').innerHTML = "00";
+        document.getElementById('minuts').innerHTML = "00";
+        document.getElementById('seconds').innerHTML = "00"; 
+    }
+
 
 },1000);
